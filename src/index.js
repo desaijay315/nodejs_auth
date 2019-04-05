@@ -1,19 +1,17 @@
 const express     = require('express')
 require('./db/mongoose');
-const userRouter = require('./router/user')
-const PostRouter = require('./router/post')
+const userRoutes = require('./router/user')
+const PostRoutes = require('./router/post')
 
-const app = express();
+const app   = express();
 const port  =  process.env.PORT || 3005
 
 app.use(express.json())
 
-app.use(userRouter)
-app.use(PostRouter)
+app.use(userRoutes)
+app.use(PostRoutes)
 
 
 app.listen(port,() =>{
     console.log('server is up on ' + port);
 })
-
-

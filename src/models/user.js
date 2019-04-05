@@ -50,7 +50,11 @@ const UserSchema  = new mongoose.Schema({
             type:String,
             required: true
         }
-    }]
+    }],
+    createdAt:{
+        type: Date,
+        default: Date.now
+    }
 });
 
 UserSchema.virtual('posts', {
@@ -59,7 +63,10 @@ UserSchema.virtual('posts', {
     foreignField: 'author'
 })
 
-UserSchema.statics.findByCredentials = async (email, password) => {
+
+
+
+UserSchema.statics.checkValidCredentials = async (email, password) => {
     const user = await User.findOne({email})
 
     if(!user){
@@ -74,10 +81,9 @@ UserSchema.statics.findByCredentials = async (email, password) => {
     return user
 }
 
-UserSchema.methods.generateAuthToken = async function(){
+UserSchema.methods.newAuthToken = async function(){
     const user  = this
     const token =  jwt.sign({ _id: user.id.toString() },'thisismynewblog')
-
     user.tokens = user.tokens.concat({ token })
     await user.save()
     return token
@@ -96,11 +102,9 @@ UserSchema.methods.toJSON = function(){
 //hash the plain text password before saving
 UserSchema.pre('save', async function(next){
     const user = this
-
     if(user.isModified('password')){
         user.password = await bcrypt.hash(user.password, 8)
     }
-
     next()
 })
 
