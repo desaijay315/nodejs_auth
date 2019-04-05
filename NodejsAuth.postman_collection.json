@@ -20,7 +20,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"qwerty\",\n\t\"age\":40,\n\t\"email\":\"dummy@gmail.com\",\n\t\"password\":\"12345678\"\n}"
+					"raw": "{\n\t\"name\":\"qwerty\",\n\t\"age\":40,\n\t\"email\":\"dummy1@gmail.com\",\n\t\"password\":\"12345678\"\n}"
 				},
 				"url": {
 					"raw": "{{nodeurl}}/users",
@@ -339,7 +339,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n \"email\":\"dummy@gmail.com\",\n \"password\":\"12345678\"\n}"
+					"raw": "{\n \"email\":\"dummy1@gmail.com\",\n \"password\":\"12345678\"\n}"
 				},
 				"url": {
 					"raw": "{{nodeurl}}/users/login",
