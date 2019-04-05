@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "2adff8c6-a833-4fdd-8846-929dea464969",
+		"name": "NodejsAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"qwerty\",\n\t\"age\":40,\n\t\"email\":\"dummy@gmail.com\",\n\t\"password\":\"12345678\"\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/users",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Nodejs\",\n\t\"description\":\"this is new blog on nodejs\"\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/posts",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{nodeurl}}/users/me",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Single Post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{nodeurl}}/posts/5ca5ecd4bedba9a29223d513",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"posts",
+						"5ca5ecd4bedba9a29223d513"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment on single post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"Nice article\"\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/posts/5ca5ecd4bedba9a29223d513/comment",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"posts",
+						"5ca5ecd4bedba9a29223d513",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fecth comment on single post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"Nice article\"\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/posts/5ca5ecd4bedba9a29223d513/comment",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"posts",
+						"5ca5ecd4bedba9a29223d513",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{nodeurl}}/posts",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"jayyy\",\n  \"password\":\"jaydesai\"\n\t\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/users/me",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \t\"description\":\"noooooooo\",\n\t\"completed\":true\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/posts/5ca34cd752bc0b4925bbd134",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"posts",
+						"5ca34cd752bc0b4925bbd134"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\":\"goto  sleep\",\n  \"completed\":false\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/users/me",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\":\"goto  sleep\",\n  \"completed\":false\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/posts/5ca5fb4b576737a988288a96",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"posts",
+						"5ca5fb4b576737a988288a96"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0e178f47-3f34-456f-b738-ca330497c1f3",
+						"exec": [
+							"if(pm.response.code === 200 ){",
+							"    pm.environment.set('authtoken', pm.response.json().token)",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"email\":\"dummy@gmail.com\",\n \"password\":\"12345678\"\n}"
+				},
+				"url": {
+					"raw": "{{nodeurl}}/users/login",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{nodeurl}}/users/logout",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout All",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{nodeurl}}/users/logout",
+					"host": [
+						"{{nodeurl}}"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authtoken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9c7ef4d3-64b2-49fe-b1db-65a8c6b26b1a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5df7dc9c-9a59-4ceb-befc-6dcef99063dd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

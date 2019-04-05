@@ -5,7 +5,7 @@ const Comment       = require('../models/comment')
 const {ObjectID}    = require('mongodb')
 const  authenticate = require('../middleware/auth')
 
-router.post('/posts',authenticate,async (req,res) => {
+router.post('/posts',authenticate, async (req,res) => {
     const post =  new Post({
         ...req.body,
         author: req.user._id
