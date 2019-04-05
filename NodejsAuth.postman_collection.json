@@ -20,7 +20,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"qwerty\",\n\t\"age\":40,\n\t\"email\":\"dummy1@gmail.com\",\n\t\"password\":\"12345678\"\n}"
+					"raw": "{\n\t\"name\":\"qwerty\",\n\t\"age\":40,\n\t\"email\":\"dummy1222@gmail.com\",\n\t\"password\":\"12345678\"\n}"
 				},
 				"url": {
 					"raw": "{{nodeurl}}/users",
@@ -46,7 +46,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\":\"Nodejs\",\n\t\"description\":\"this is new blog on nodejs\"\n}"
+					"raw": "{\n\t\"title\":\"Nodejs blog12\",\n\t\"description\":\"this is new blog on nodejs\"\n}"
 				},
 				"url": {
 					"raw": "{{nodeurl}}/posts",
@@ -102,13 +102,13 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{nodeurl}}/posts/5ca5ecd4bedba9a29223d513",
+					"raw": "{{nodeurl}}/posts/5ca765dcde6cdb0017d34fd2",
 					"host": [
 						"{{nodeurl}}"
 					],
 					"path": [
 						"posts",
-						"5ca5ecd4bedba9a29223d513"
+						"5ca765dcde6cdb0017d34fd2"
 					]
 				}
 			},
@@ -129,13 +129,13 @@
 					"raw": "{\n\t\"comment\":\"Nice article\"\n}"
 				},
 				"url": {
-					"raw": "{{nodeurl}}/posts/5ca5ecd4bedba9a29223d513/comment",
+					"raw": "{{nodeurl}}/posts/5ca765dcde6cdb0017d34fd2/comment",
 					"host": [
 						"{{nodeurl}}"
 					],
 					"path": [
 						"posts",
-						"5ca5ecd4bedba9a29223d513",
+						"5ca765dcde6cdb0017d34fd2",
 						"comment"
 					]
 				}
@@ -163,13 +163,13 @@
 					"raw": "{\n\t\"comment\":\"Nice article\"\n}"
 				},
 				"url": {
-					"raw": "{{nodeurl}}/posts/5ca5ecd4bedba9a29223d513/comment",
+					"raw": "{{nodeurl}}/posts/5ca765dcde6cdb0017d34fd2/comment",
 					"host": [
 						"{{nodeurl}}"
 					],
 					"path": [
 						"posts",
-						"5ca5ecd4bedba9a29223d513",
+						"5ca765dcde6cdb0017d34fd2",
 						"comment"
 					]
 				}
@@ -214,7 +214,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"jayyy\",\n  \"password\":\"jaydesai\"\n\t\n}"
+					"raw": "{\n  \"name\": \"dummy12\",\n  \"password\":\"1234567890\"\n\t\n}"
 				},
 				"url": {
 					"raw": "{{nodeurl}}/users/me",
@@ -241,16 +241,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \t\"description\":\"noooooooo\",\n\t\"completed\":true\n}"
+					"raw": "{\n  \"title\":\"dummy blog\",\n  \"description\":\"this is the first post\"\n}"
 				},
 				"url": {
-					"raw": "{{nodeurl}}/posts/5ca34cd752bc0b4925bbd134",
+					"raw": "{{nodeurl}}/posts/5ca733287c6a7fe6b373c0d6",
 					"host": [
 						"{{nodeurl}}"
 					],
 					"path": [
 						"posts",
-						"5ca34cd752bc0b4925bbd134"
+						"5ca733287c6a7fe6b373c0d6"
 					]
 				}
 			},
@@ -295,16 +295,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"description\":\"goto  sleep\",\n  \"completed\":false\n}"
+					"raw": ""
 				},
 				"url": {
-					"raw": "{{nodeurl}}/posts/5ca5fb4b576737a988288a96",
+					"raw": "{{nodeurl}}/posts/5ca733287c6a7fe6b373c0d6",
 					"host": [
 						"{{nodeurl}}"
 					],
 					"path": [
 						"posts",
-						"5ca5fb4b576737a988288a96"
+						"5ca733287c6a7fe6b373c0d6"
 					]
 				}
 			},
@@ -339,7 +339,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n \"email\":\"dummy1@gmail.com\",\n \"password\":\"12345678\"\n}"
+					"raw": "{\n \"email\":\"dummy1222@gmail.com\",\n \"password\":\"12345678\"\n}"
 				},
 				"url": {
 					"raw": "{{nodeurl}}/users/login",
