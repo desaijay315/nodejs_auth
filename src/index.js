@@ -4,7 +4,7 @@ const userRoutes = require('./router/user')
 const PostRoutes = require('./router/post')
 
 const app   = express();
-const port  =  process.env.PORT || 3005
+const port  =  process.env.PORT
 
 app.use(express.json())
 

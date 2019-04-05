@@ -83,7 +83,7 @@ UserSchema.statics.checkValidCredentials = async (email, password) => {
 
 UserSchema.methods.newAuthToken = async function(){
     const user  = this
-    const token =  jwt.sign({ _id: user.id.toString() },'thisismynewblog')
+    const token =  jwt.sign({ _id: user.id.toString() },process.env.JWT_SECRET)
     user.tokens = user.tokens.concat({ token })
     await user.save()
     return token
