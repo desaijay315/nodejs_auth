@@ -12,7 +12,7 @@ app.use(userRoutes)
 app.use(PostRoutes)
 
 app.get('/', function (req, res) {
- res.send('desai hello world!');
+ res.send('hello world!');
 });
 
 
